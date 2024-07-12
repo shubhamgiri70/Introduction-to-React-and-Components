@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  background-color: rgb(147, 72, 72);
+}
+
+main {
+  width: 580px;
+  margin: 10rem auto;
+  text-align: center;
+  background-color: rgb(219, 197, 169);
+  border-radius: 6px;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+.input-text {
+  width: 80%;
+  height: 1.5rem;
+  padding: 4px;
+  margin-bottom: 1rem;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  padding: 1rem 4rem;
+  border-bottom: 2px dashed slategray;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-right: 2rem;
+  color: black;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: darkgreen;
+  color: aliceblue;
+  border: none;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: rgb(9, 171, 9);
+}
