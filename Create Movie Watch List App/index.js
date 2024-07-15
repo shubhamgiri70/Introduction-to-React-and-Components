@@ -25,27 +25,49 @@ function handleInput(event) {
 
 function handleChange(event) {
   let id = event.target.id;
-
   allMovies[id].watched = !allMovies[id].watched;
   createUI(allMovies, rootEle);
+}
+
+function createEle(type, attr = {}, ...children) {
+  let element = document.createElement(type);
+  for (let key in attr) {
+    if (key.startsWith("on")) {
+      let eventType = key.replace("on", "").toLowerCase();
+      element.addEventListener(eventType, attr[key]);
+    } else {
+      element[key] = attr[key];
+    }
+  }
+  children.forEach((child) => {
+    if (typeof child === "object") {
+      element.append(child);
+    } else if (typeof child === "string") {
+      let node = document.createTextNode(child);
+      element.append(node);
+    }
+  });
+  return element;
 }
 
 function createUI(data, root) {
   root.innerHTML = "";
   data.forEach((movie, i) => {
-    let div = document.createElement("div");
-    div.classList.add("movie-list");
+    let div = createEle(
+      "div",
+      { className: "movie-list" },
+      createEle("p", {}, movie.name),
+      createEle(
+        "button",
+        {
+          id: i,
+          onClick: handleChange,
+        },
+        movie.watched ? "Watched" : "To Watch"
+      )
+    );
 
-    let p = document.createElement("p");
-    p.innerText = movie.name;
-
-    let button = document.createElement("button");
-    button.id = i;
-    button.innerText = movie.watched ? "Watched" : "To Watch";
-    button.addEventListener("click", handleChange);
-
-    div.append(p, button);
-    rootEle.appendChild(div);
+    root.appendChild(div);
   });
 }
 
