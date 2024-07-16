@@ -29,35 +29,34 @@ function handleChange(event) {
   createUI(allMovies, rootEle);
 }
 
-function createEle(type, attr = {}, ...children) {
-  let element = document.createElement(type);
-  for (let key in attr) {
-    if (key.startsWith("on")) {
-      let eventType = key.replace("on", "").toLowerCase();
-      element.addEventListener(eventType, attr[key]);
-    } else {
-      element[key] = attr[key];
-    }
-  }
-  children.forEach((child) => {
-    if (typeof child === "object") {
-      element.append(child);
-    } else if (typeof child === "string") {
-      let node = document.createTextNode(child);
-      element.append(node);
-    }
-  });
-  return element;
-}
+// function createEle(type, attr = {}, ...children) {
+//   let element = document.createElement(type);
+//   for (let key in attr) {
+//     if (key.startsWith("on")) {
+//       let eventType = key.replace("on", "").toLowerCase();
+//       element.addEventListener(eventType, attr[key]);
+//     } else {
+//       element[key] = attr[key];
+//     }
+//   }
+//   children.forEach((child) => {
+//     if (typeof child === "object") {
+//       element.append(child);
+//     } else if (typeof child === "string") {
+//       let node = document.createTextNode(child);
+//       element.append(node);
+//     }
+//   });
+//   return element;
+// }
 
 function createUI(data, root) {
-  root.innerHTML = "";
-  data.forEach((movie, i) => {
-    let div = createEle(
+  let ui = data.map((movie, i) => {
+    return React.createElement(
       "div",
       { className: "movie-list" },
-      createEle("p", {}, movie.name),
-      createEle(
+      React.createElement("p", {}, movie.name),
+      React.createElement(
         "button",
         {
           id: i,
@@ -66,9 +65,9 @@ function createUI(data, root) {
         movie.watched ? "Watched" : "To Watch"
       )
     );
-
-    root.appendChild(div);
   });
+
+  ReactDOM.render(ui, root);
 }
 
 input.addEventListener("keyup", handleInput);
