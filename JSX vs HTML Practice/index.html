@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Basic</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      let userName = "Shubham";
+      let h1 = (
+        <>
+          <h1 className="heading">{"Hello" + " " + userName.toUpperCase()}</h1>
+          <img
+            src="https://images.unsplash.com/photo-1721041068512-baf0fbbf450a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
+            alt=""
+          />
+        </>
+      );
+      let textarea = <textarea value="Type your bio" />;
+
+      ReactDOM.render(h1, document.querySelector("#root"));
+    </script>
+  </body>
+</html>
