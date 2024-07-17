@@ -9,11 +9,6 @@
   <body>
     <main>
       <h1>Movie Watch List</h1>
-      <input
-        type="text"
-        placeholder="Enter the movie name!"
-        class="input-text"
-      />
       <div class="root"></div>
     </main>
     <!-- React and ReactDOM CDN -->
@@ -25,6 +20,63 @@
       crossorigin
       src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
     ></script>
-    <script src="index.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/@babel/standalone/babel.min.js"
+    ></script>
+    <script type="text/babel">
+      const { useState } = React;
+
+      const MovieApp = () => {
+        const [movies, setMovies] = useState([
+          { name: "Inception", watched: false },
+          { name: "Forest Gump", watched: true },
+        ]);
+        const [newMovie, setNewMovie] = useState("");
+
+        const handleInputChange = (event) => {
+          setNewMovie(event.target.value);
+        };
+
+        const handleInputKeyPress = (event) => {
+          if (event.key === "Enter" && newMovie.trim() !== "") {
+            setMovies([...movies, { name: newMovie, watched: false }]);
+            setNewMovie("");
+          }
+        };
+
+        const toggleWatched = (index) => {
+          const updatedMovies = movies.map((movie, i) =>
+            i === index ? { ...movie, watched: !movie.watched } : movie
+          );
+          setMovies(updatedMovies);
+        };
+
+        return (
+          <div>
+            <input
+              type="text"
+              placeholder="Enter the movie name!"
+              className="input-text"
+              value={newMovie}
+              onChange={handleInputChange}
+              onKeyDown={handleInputKeyPress}
+            />
+            <div>
+              {movies.map((movie, i) => (
+                <div className="movie-list" key={i}>
+                  <p>{movie.name}</p>
+                  <button id={i} onClick={() => toggleWatched(i)}>
+                    {movie.watched ? "Watched" : "To Watch"}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      };
+
+      ReactDOM.render(<MovieApp />, document.querySelector(".root"));
+    </script>
   </body>
 </html>
