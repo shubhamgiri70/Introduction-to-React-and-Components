@@ -18,19 +18,39 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      let userName = "Shubham";
-      let h1 = (
+      // Component
+      let Card = (props) => {
+        console.log(props);
+        return (
+          <>
+            <h1 className="heading">
+              {"Hello" + " " + props.userName.toUpperCase()}
+            </h1>
+            <img src={props.imgURL} alt="" />
+          </>
+        );
+      };
+
+      let starks = (
         <>
-          <h1 className="heading">{"Hello" + " " + userName.toUpperCase()}</h1>
-          <img
-            src="https://images.unsplash.com/photo-1721041068512-baf0fbbf450a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0fHx8ZW58MHx8fHx8"
-            alt=""
+          <Card
+            userName="Arya"
+            imgURL="https://images.unsplash.com/photo-1721152839656-3e13e2ceef29?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D"
+          />
+          <Card
+            userName="John"
+            imgURL="https://images.unsplash.com/photo-1716890385566-dee802c56d2d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3MHx8fGVufDB8fHx8fA%3D%3D"
+          />
+          <Card
+            userName="Tyrion"
+            imgURL="https://images.unsplash.com/photo-1721069210007-d4aedc8d02c6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMzZ8fHxlbnwwfHx8fHw%3D"
           />
         </>
       );
+
       let textarea = <textarea value="Type your bio" />;
 
-      ReactDOM.render(h1, document.querySelector("#root"));
+      ReactDOM.render(starks, document.querySelector("#root"));
     </script>
   </body>
 </html>
