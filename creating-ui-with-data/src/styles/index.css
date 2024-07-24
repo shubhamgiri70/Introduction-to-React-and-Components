@@ -1,0 +1,22 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 400px;
+  text-align: center;
+  border: 1.2px solid black;
+  margin: 1rem;
+}
+
+img {
+  margin-top: 1rem;
+  width: 380px;
+}
+
+button {
+  margin-bottom: 1.5rem;
+}

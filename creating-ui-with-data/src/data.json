@@ -1,0 +1,125 @@
+{
+  "animals": [
+    {
+      "id": 1,
+      "name": "Buddy 🐶",
+      "breed": "Golden Retriever",
+      "age": 3,
+      "color": "Golden",
+      "weight": 30,
+      "owner": "John Doe",
+      "imgUrl": "https://placedog.net/400/300?random=1",
+      "location": "New York 🗽",
+      "animalType": "dog"
+    },
+    {
+      "id": 2,
+      "name": "Misty 🐈‍⬛",
+      "breed": "Ragdoll",
+      "age": 5,
+      "color": "Blue Point",
+      "weight": 14,
+      "owner": "Sarah Wilson",
+      "imgUrl": "https://placekitten.com/400/300?random=5",
+      "location": "Phoenix 🌵",
+      "animalType": "cat"
+    },
+    {
+      "id": 3,
+      "name": "Max 🐕",
+      "breed": "German Shepherd",
+      "age": 5,
+      "color": "Black and Tan",
+      "weight": 35,
+      "owner": "Jane Smith",
+      "imgUrl": "https://placedog.net/400/300?random=2",
+      "location": "Los Angeles 🌴",
+      "animalType": "dog"
+    },
+    {
+      "id": 4,
+      "name": "Bella 🐾",
+      "breed": "Labrador Retriever",
+      "age": 2,
+      "color": "Yellow",
+      "weight": 25,
+      "owner": "Emily Davis",
+      "imgUrl": "https://placedog.net/400/300?random=3",
+      "location": "Chicago 🌆",
+      "animalType": "dog"
+    },
+    {
+      "id": 5,
+      "name": "Rocky 🐕‍🦺",
+      "breed": "Bulldog",
+      "age": 4,
+      "color": "Brindle",
+      "weight": 23,
+      "owner": "Michael Brown",
+      "imgUrl": "https://placedog.net/400/300?random=4",
+      "location": "Houston 🚀",
+      "animalType": "dog"
+    },
+    {
+      "id": 6,
+      "name": "Shadow 🐈",
+      "breed": "Maine Coon",
+      "age": 4,
+      "color": "Brown Tabby",
+      "weight": 15,
+      "owner": "Jane Smith",
+      "imgUrl": "https://placekitten.com/400/300?random=2",
+      "location": "Los Angeles 🌴",
+      "animalType": "cat"
+    },
+    {
+      "id": 7,
+      "name": "Lucy 🐩",
+      "breed": "Poodle",
+      "age": 1,
+      "color": "White",
+      "weight": 20,
+      "owner": "Sarah Wilson",
+      "imgUrl": "https://placedog.net/400/300?random=5",
+      "location": "Phoenix 🌵",
+      "animalType": "dog"
+    },
+    {
+      "id": 8,
+      "name": "Whiskers 🐱",
+      "breed": "Siamese",
+      "age": 3,
+      "color": "Seal Point",
+      "weight": 10,
+      "owner": "John Doe",
+      "imgUrl": "https://placekitten.com/400/300?random=1",
+      "location": "New York 🗽",
+      "animalType": "cat"
+    },
+
+    {
+      "id": 9,
+      "name": "Luna 🐾",
+      "breed": "Persian",
+      "age": 2,
+      "color": "White",
+      "weight": 12,
+      "owner": "Emily Davis",
+      "imgUrl": "https://placekitten.com/400/300?random=3",
+      "location": "Chicago 🌆",
+      "animalType": "cat"
+    },
+    {
+      "id": 10,
+      "name": "Simba 🦁",
+      "breed": "Bengal",
+      "age": 1,
+      "color": "Orange Spotted",
+      "weight": 13,
+      "owner": "Michael Brown",
+      "imgUrl": "https://placekitten.com/400/300?random=4",
+      "location": "Houston 🚀",
+      "animalType": "cat"
+    }
+  ]
+}
