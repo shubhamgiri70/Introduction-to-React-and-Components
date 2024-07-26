@@ -10,11 +10,13 @@
   text-align: center;
   border: 1.2px solid black;
   margin: 1rem;
+  border-radius: 6px;
 }
 
 img {
   margin-top: 1rem;
   width: 380px;
+  border-radius: 6px;
 }
 
 button {
