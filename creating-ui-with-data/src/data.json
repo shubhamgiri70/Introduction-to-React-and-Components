@@ -20,7 +20,7 @@
       "color": "Blue Point",
       "weight": 14,
       "owner": "Sarah Wilson",
-      "imgUrl": "https://placekitten.com/400/300?random=5",
+      "imgUrl": "https://cataas.com/cat?width=400&height=300",
       "location": "Phoenix 🌵",
       "animalType": "cat"
     },
@@ -68,7 +68,7 @@
       "color": "Brown Tabby",
       "weight": 15,
       "owner": "Jane Smith",
-      "imgUrl": "https://placekitten.com/400/300?random=2",
+      "imgUrl": "https://loremflickr.com/400/300/cat",
       "location": "Los Angeles 🌴",
       "animalType": "cat"
     },
@@ -92,7 +92,7 @@
       "color": "Seal Point",
       "weight": 10,
       "owner": "John Doe",
-      "imgUrl": "https://placekitten.com/400/300?random=1",
+      "imgUrl": "https://placekitten.com/400/300",
       "location": "New York 🗽",
       "animalType": "cat"
     },
@@ -105,7 +105,7 @@
       "color": "White",
       "weight": 12,
       "owner": "Emily Davis",
-      "imgUrl": "https://placekitten.com/400/300?random=3",
+      "imgUrl": "https://loremflickr.com/400/300/cat",
       "location": "Chicago 🌆",
       "animalType": "cat"
     },
@@ -117,7 +117,7 @@
       "color": "Orange Spotted",
       "weight": 13,
       "owner": "Michael Brown",
-      "imgUrl": "https://placekitten.com/400/300?random=4",
+      "imgUrl": "https://cataas.com/cat?width=400&height=300",
       "location": "Houston 🚀",
       "animalType": "cat"
     }

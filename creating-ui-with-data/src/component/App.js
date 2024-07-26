@@ -1,25 +1,23 @@
+import data from "../data.json";
+
 function App() {
   return (
     <div className="main">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {data.animals.map((animal) => (
+        <Card key={animal.id} info={animal} />
+      ))}
     </div>
   );
 }
 
-function Card() {
+function Card(props) {
   return (
     <div className="wrapper">
-      <img src="https://placedog.net/400/300?random=2" alt="01" />
-      <h2>Golden Retriever</h2>
-      <h3>Los Angeles 🌴</h3>
+      <img src={props.info.imgUrl} alt={props.info.name} />
+      <h2>{props.info.breed}</h2>
+      <h3>{props.info.location}</h3>
       <p>
-        weight: 15 <span>age: 3</span>
+        Weight: {props.info.weight} <span>Age: {props.info.age}</span>
       </p>
       <button>🐶 Say Hello 🐶</button>
     </div>
