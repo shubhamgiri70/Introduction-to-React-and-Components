@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="main">
       {data.animals.map((animal) => (
-        <Card key={animal.id} info={animal} />
+        <Card key={animal.id} {...animal} />
       ))}
     </div>
   );
@@ -13,13 +13,17 @@ function App() {
 function Card(props) {
   return (
     <div className="wrapper">
-      <img src={props.info.imgUrl} alt={props.info.name} />
-      <h2>{props.info.breed}</h2>
-      <h3>{props.info.location}</h3>
+      <img src={props.imgUrl} alt={props.name} />
+      <h2>{props.breed}</h2>
+      <h3>{props.location}</h3>
       <p>
-        Weight: {props.info.weight} <span>Age: {props.info.age}</span>
+        Weight: {props.weight} <span>Age: {props.age}</span>
       </p>
-      <button>🐶 Say Hello 🐶</button>
+      {props.animalType === "dog" ? (
+        <button className="dog">🐶 Say Hello 🐶</button>
+      ) : (
+        <button className="cat">😺 Say Hello 😺</button>
+      )}
     </div>
   );
 }
