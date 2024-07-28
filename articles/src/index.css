@@ -1,0 +1,196 @@
+/* Remove default margins and paddings */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+pre {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default spacing for paragraphs */
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default spacing for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default spacing for lists */
+ul,
+ol,
+dl {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Remove default styling for form elements */
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Remove default styling for anchor tags */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default styling for images */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default styling for tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* custom style  */
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: brown;
+  color: white;
+}
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+  padding: 0.4rem;
+  margin-left: 1rem;
+}
+
+ul {
+  display: flex;
+  padding: 1rem;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+/* Hero section */
+
+.hero {
+  background-image: url("https://wallpapers.com/images/hd/crypto-bitcoin-with-speed-motion-graphics-9bfrqo5li82lokxf.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 70vh;
+  width: 100%;
+}
+
+/* Articles Section */
+
+.article {
+  margin: 1.2rem;
+  width: 30%;
+  height: 600px;
+  border: 1px solid rgb(134, 132, 132);
+  border-radius: 8px;
+}
+
+figure {
+  position: relative;
+}
+
+.article-img {
+  width: 600px;
+  height: 400px;
+}
+
+h1 {
+  top: 17.8rem;
+  bottom: 1rem;
+  position: absolute;
+  padding: 1rem;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  height: 5rem;
+}
+
+p {
+  padding: 1rem;
+}
+
+.button {
+  background-color: rgb(223, 163, 85);
+  color: white;
+  padding: 0.8rem;
+  margin: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.articles {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgb(163, 95, 95);
+}
+
+.footer span {
+  font-size: 1.3rem;
+  color: white;
+}
