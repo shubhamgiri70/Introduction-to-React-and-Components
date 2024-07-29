@@ -1,4 +1,5 @@
 import data from "../data.js";
+import PropTypes from "prop-types";
 
 function Article(props) {
   return (
@@ -22,5 +23,15 @@ function Article(props) {
     </>
   );
 }
+
+Article.propTypes = {
+  author: PropTypes.string,
+  content: PropTypes.string,
+  description: PropTypes.string,
+  publishedAt: PropTypes.string,
+  url: PropTypes.string,
+  urlToImage: PropTypes.string,
+  title: PropTypes.string,
+};
 
 export default Article;
