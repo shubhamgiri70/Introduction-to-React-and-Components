@@ -1,7 +1,7 @@
 const data = [
   {
     author: "Omkar Godbole",
-    title: "Third Halving Turns Out to Be Non-Event for Bitcoin’s Price",
+    title: "Bitcoin's price volatility has declined",
     description:
       "Bitcoin's price volatility has declined following the network's third mining reward halving event on Monday.",
     url: "https://www.coindesk.com/third-blockchain-halving-turns-out-non-event-bitcoins-price",
@@ -62,7 +62,6 @@ const data = [
     content:
       "On Monday, the Bitcoin block reward halving finally came to pass.\r\nIt was an exciting event celebrated by tens of thousands of cryptocurrency investors, with thousands packing into celebratory live streams, tens of thousands liking halving tweets, and hundred… [+3113 chars]",
   },
-
   {
     author: "Satoshi Nakaboto",
     title:
