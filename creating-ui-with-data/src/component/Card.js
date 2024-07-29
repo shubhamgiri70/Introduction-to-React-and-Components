@@ -1,5 +1,10 @@
 import PropTypes from "prop-types";
 
+function handleClick(breed, e) {
+  console.log(e);
+  alert(`Hey, i'm ${breed}`);
+}
+
 function Card(props) {
   return (
     <div className="wrapper">
@@ -10,9 +15,13 @@ function Card(props) {
         Weight: {props.weight} <span>Age: {props.age}</span>
       </p>
       {props.animalType === "dog" ? (
-        <button className="dog">🐶 Say Hello 🐶</button>
+        <button onClick={(e) => handleClick(props.breed, e)} className="dog">
+          🐶 Say Hello 🐶
+        </button>
       ) : (
-        <button className="cat">😺 Say Hello 😺</button>
+        <button onClick={(e) => handleClick(props.breed, e)} className="cat">
+          😺 Say Hello 😺
+        </button>
       )}
     </div>
   );
