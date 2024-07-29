@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding Events</title>
+    <style>
+      button {
+        margin-right: 1.3rem;
+        padding: 0.8rem;
+        background-color: cadetblue;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Understanding Events</h1>
+      <div class="root"></div>
+      <!-- REACT LIBRARY -->
+      <script
+        src="https://unpkg.com/react@17/umd/react.production.min.js"
+        crossorigin
+      ></script>
+
+      <!-- REACT DOM LIBRARY -->
+      <script
+        src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"
+        crossorigin
+      ></script>
+
+      <!-- BABEL LIBRARY -->
+      <script
+        src="https://unpkg.com/@babel/standalone@7/babel.min.js"
+        crossorigin
+      ></script>
+
+      <script type="text/babel">
+        let root = document.querySelector(".root");
+
+        function handleFirst() {
+          alert(`Hello React Event!`);
+        }
+
+        function First() {
+          return (
+            <>
+              <button onClick={handleFirst}>Click Me</button>
+            </>
+          );
+        }
+
+        function handleSecond() {
+          alert(`To learn React use https://reactjs.org`);
+          alert(`React and ReactDOM works together`);
+          alert(`Babel helps in writing JSX`);
+        }
+
+        function Second() {
+          return (
+            <>
+              <button onClick={handleSecond}>How can I help you?</button>
+            </>
+          );
+        }
+
+        function Third() {
+          let names = ["Arya", "John", "Bran"];
+          return names.map((name) => (
+            <button
+              onClick={() => {
+                alert(`Hello ${name}`);
+              }}
+            >
+              {name}
+            </button>
+          ));
+        }
+
+        function Fourth() {
+          let fruits = [
+            { id: "apple", value: "🍎 apple" },
+            { id: "orange", value: "🍊 orange" },
+            { id: "grape", value: "🍇 grape" },
+            { id: "pear", value: "🍐 pear" },
+          ];
+          return fruits.map((fruit) => (
+            <button
+              key={fruit.id}
+              onClick={() => {
+                alert(`Hello ${fruit.value}`);
+              }}
+            >
+              {fruit.value}
+            </button>
+          ));
+        }
+
+        ReactDOM.render(
+          <>
+            <First />
+            <Second />
+            <Third />
+            <Fourth />
+          </>,
+          root
+        );
+      </script>
+    </div>
+  </body>
+</html>
