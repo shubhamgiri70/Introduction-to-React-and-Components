@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Palette UI</title>
+    <style>
+      ul {
+        width: 500px;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      li {
+        margin-left: 2rem;
+        width: 100px;
+      }
+      .color--box {
+        width: 100px;
+        height: 50px;
+        margin-bottom: 0.6rem;
+      }
+      .color--info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.2rem;
+      }
+      span {
+        font-size: 1.2rem;
+      }
+      .color--name {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        margin-bottom: 0.6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- React Library -->
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <!-- React DOM Library -->
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Load Colors Data -->
+    <script src="colors.js"></script>
+    <script type="text/babel">
+      function Colors() {
+        return Object.keys(colors).map((colorKey) => (
+          <Color name={colorKey} allColors={colors[colorKey]} />
+        ));
+      }
+
+      function Color(props) {
+        return (
+          <div>
+            <div className="color--name">{props.name}</div>
+            <ul>
+              {props.allColors.map((color, index) => (
+                <li>
+                  <div
+                    className="color--box"
+                    style={{ backgroundColor: color }}
+                  ></div>
+                  <div className="color--info">
+                    <span>{index === 0 ? 50 : index * 100}</span>
+                    <span>{color}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
+      ReactDOM.render(<Colors />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
